@@ -1,6 +1,9 @@
 # Kakoune rainbow
 
-A fork of JJK96's [kakoune-rainbow](https://github.com/JJK96/kakoune-rainbow), which gains a substantial speed boost at the cost of a more involved and slightly sketchy hook setup.
+Personal fork of JJK96's [kakoune-rainbow](https://github.com/JJK96/kakoune-rainbow), which gains a substantial speed boost at the cost of a more involved and slightly sketchy hook setup.
+
+Highlights pairs of parentheses in the same color, recursive pairs are highlighted in a different color.
+
 # Install
 
 Add this plugin to your `autoload` folder.
