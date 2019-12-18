@@ -50,8 +50,18 @@ define-command -hidden rainbow-selection -params 1 %{
 }
 
 define-command rainbow-enable %{
-    hook -group rainbow window InsertIdle .* %{ rainbow }
-    hook -group rainbow window NormalIdle .* %{ rainbow }
+    hook -group rainbow window WinCreate .* %{ rainbow }
+    hook -group rainbow window NormalKey "d" %{ rainbow }
+    hook -group rainbow window NormalKey "c" %{ rainbow }
+    hook -group rainbow window NormalKey "P" %{ rainbow }
+    hook -group rainbow window NormalKey "p" %{ rainbow }
+    hook -group rainbow window InsertKey "\(" %{ rainbow }
+    hook -group rainbow window InsertKey "\[" %{ rainbow }
+    hook -group rainbow window InsertKey "\{" %{ rainbow }
+    hook -group rainbow window InsertChar "\)" %{ rainbow }
+    hook -group rainbow window InsertChar "\]" %{ rainbow }
+    hook -group rainbow window InsertChar "\}" %{ rainbow }
+
 }
 
 define-command rainbow-disable %{
