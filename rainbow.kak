@@ -64,7 +64,7 @@ define-command rainbow-enable %{
     # | hooks are added. If this hook is added before the previous one,
     # | it breaks both this command and rainbow-disable.
     hook -group rainbow window InsertChar "(?:\)|\]|\})" %{ rainbow }
-    }
+}
 
 define-command rainbow-disable %{
     remove-highlighter window/ranges_rainbow
