@@ -55,19 +55,17 @@ define-command rainbow-enable %{
     rainbow
     # * A deleting command is called in Normal mode
     hook -group rainbow window NormalKey "(?:d|c|P|p|R|<a-P>|<a-p>|<a-R>)" %{ rainbow }
-    # * A closing delimiter is inserted in Insert mode
-    # | NOTE: There's something janky going on with the handling of regexes with
-    # | escaped chars and logical or, hence the multiple hooks.
-    hook -group rainbow window InsertChar "\)" %{ rainbow }
-    hook -group rainbow window InsertChar "\]" %{ rainbow }
-    hook -group rainbow window InsertChar "\}" %{ rainbow }
     # * An opening delimiter key is pressed in Insert mode
     # | NOTE: This is necessary to play nice with auto-pairs, as the characters
     # | inserted by that plugin do not seem to trigger the InsertChar hook.
-    hook -group rainbow window InsertKey "\(" %{ rainbow }
-    hook -group rainbow window InsertKey "\[" %{ rainbow }
-    hook -group rainbow window InsertKey "\{" %{ rainbow }
-}
+    hook -group rainbow window InsertKey "(?:\(|\[|\{)" %{ rainbow }
+    # * A closing delimiter is inserted in Insert mode (allows for operation with auto-pairs disabled.)
+    # | JANK ALERT: kak appears to have ~opinions~ on the order in which
+    # | hooks are added. If this hook is added before the previous one,
+    # | it breaks both this command and rainbow-disable.
+    hook -group rainbow window InsertChar "(?:\)|\]|\})" %{ rainbow }
+    }
+
 
 define-command rainbow-disable %{
     remove-highlighter window/ranges_rainbow
