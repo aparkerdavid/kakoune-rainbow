@@ -50,6 +50,7 @@ define-command -hidden rainbow-selection -params 1 %{
 }
 
 define-command rainbow-enable %{
+<<<<<<< HEAD
     # Rainbow delimiters should be highlighted when:
     # * rainbow-enable is called
     rainbow
@@ -66,6 +67,21 @@ define-command rainbow-enable %{
     hook -group rainbow window InsertChar "(?:\)|\]|\})" %{ rainbow }
     }
 
+=======
+    hook -group rainbow window WinCreate .* %{ rainbow }
+    hook -group rainbow window NormalKey "d" %{ rainbow }
+    hook -group rainbow window NormalKey "c" %{ rainbow }
+    hook -group rainbow window NormalKey "P" %{ rainbow }
+    hook -group rainbow window NormalKey "p" %{ rainbow }
+    hook -group rainbow window InsertKey "\(" %{ rainbow }
+    hook -group rainbow window InsertKey "\[" %{ rainbow }
+    hook -group rainbow window InsertKey "\{" %{ rainbow }
+    hook -group rainbow window InsertChar "\)" %{ rainbow }
+    hook -group rainbow window InsertChar "\]" %{ rainbow }
+    hook -group rainbow window InsertChar "\}" %{ rainbow }
+
+}
+>>>>>>> 81e0326a8ea28d11ea905401a6b7a938cec67e34
 
 define-command rainbow-disable %{
     remove-highlighter window/ranges_rainbow
