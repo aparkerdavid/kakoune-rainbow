@@ -50,7 +50,6 @@ define-command -hidden rainbow-selection -params 1 %{
 }
 
 define-command rainbow-enable %{
-<<<<<<< HEAD
     # Rainbow delimiters should be highlighted when:
     # * rainbow-enable is called
     rainbow
