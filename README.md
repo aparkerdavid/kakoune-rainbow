@@ -7,7 +7,7 @@ Add this plugin to your `autoload` folder.
 
 Or use [plug](https://github.com/andreyorst/plug.kak)
 ```
-plug 'jjk96/kakoune-rainbow'
+plug 'aparkerdavid/kakoune-rainbow'
 ```
 
 # Usage
