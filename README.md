@@ -1,6 +1,6 @@
 # Kakoune rainbow
 
-A fork of JJK96's [kakoune-rainbow](https://github.com/JJK96/kakoune-rainbow), which gains a substantial speed boost at the cost of a more involved and slightly jankier hook setup.
+A fork of JJK96's [kakoune-rainbow](https://github.com/JJK96/kakoune-rainbow), which gains a substantial speed boost at the cost of a more involved and slightly sketchy hook setup.
 # Install
 
 Add this plugin to your `autoload` folder.
