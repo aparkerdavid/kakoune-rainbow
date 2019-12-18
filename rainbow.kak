@@ -67,22 +67,6 @@ define-command rainbow-enable %{
     hook -group rainbow window InsertChar "(?:\)|\]|\})" %{ rainbow }
     }
 
-=======
-    hook -group rainbow window WinCreate .* %{ rainbow }
-    hook -group rainbow window NormalKey "d" %{ rainbow }
-    hook -group rainbow window NormalKey "c" %{ rainbow }
-    hook -group rainbow window NormalKey "P" %{ rainbow }
-    hook -group rainbow window NormalKey "p" %{ rainbow }
-    hook -group rainbow window InsertKey "\(" %{ rainbow }
-    hook -group rainbow window InsertKey "\[" %{ rainbow }
-    hook -group rainbow window InsertKey "\{" %{ rainbow }
-    hook -group rainbow window InsertChar "\)" %{ rainbow }
-    hook -group rainbow window InsertChar "\]" %{ rainbow }
-    hook -group rainbow window InsertChar "\}" %{ rainbow }
-
-}
->>>>>>> 81e0326a8ea28d11ea905401a6b7a938cec67e34
-
 define-command rainbow-disable %{
     remove-highlighter window/ranges_rainbow
     remove-hooks window rainbow
